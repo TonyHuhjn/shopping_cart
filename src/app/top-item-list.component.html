@@ -1,0 +1,19 @@
+<div>
+	<a href="#">Items Catagories</a>
+	<div *ngFor="let Item of Items">
+		<a href="#" *ngIf="Duplicate(Item.category)">{{Item.category}}</a>
+		</div>
+</div>
+
+<div class="main">
+<div class="row">
+	<div *ngFor="let Item of Items">
+	<div>
+		<img class="imgs" [src]="Items.imageUrl" alt="">
+			<h3>{{Item.name}}</h3>
+			<p>Category: {{Item.category}}</p>
+	</div>
+	</div>
+</div>
+</div>
+			

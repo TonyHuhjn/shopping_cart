@@ -1,0 +1,46 @@
+<div>
+	<a>Items Categories</a>
+	<div *ngFor="let category of categories">
+		<a href="javascript:void(0)" (click)='CreateShow(category)' >{{category}}</a>
+	</div>
+	<input type="range" list="tickmarks" style="width:500px;">
+
+	<datalist id="tickmarks">
+  <option value="0" label="0">
+  <option value="10">
+  <option value="20">
+  <option value="30">
+  <option value="40">
+  <option value="50" label="500">
+  <option value="60">
+  <option value="70">
+  <option value="80">
+  <option value="90">
+  <option value="100" label="1000">
+</datalist>
+</div>
+
+<div>
+    <h3>Shopping Cart</h3>
+    <div *ngFor="let ShopItem of Shoplist">
+        <span>{{ShopItem.myItem.name}}</span>
+        <span>{{ShopItem.itemNumber}}</span>
+    </div>
+	<p>Total Price: {{summary}}</p>
+	<p><a class="btn btn-primary" role="button" >Check Out</a> </p>
+</div>
+
+<div class="main">
+<div class="row">
+	<div class="col-sm-6 col-md-3" *ngFor="let Item of cateItems">
+	<div>
+		<img [src]="Item.imageUrl" style="width:50px; height:50px;" alt="">
+			<h3>{{Item.name}}</h3>
+			<p>Category: {{Item.category}}</p>
+			<p>Price: {{Item.price}}</p>
+			<p><a class="btn btn-primary" role="button" (click)='shopping(Item)'>Add to Cart</a> </p>
+	</div>
+	</div>
+</div>
+</div>
+			

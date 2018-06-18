@@ -3,6 +3,10 @@
     "version": "1.0.0-beta.28.3",
     "name": "shopping-project"
   },
+  "styles": [
+	"node_modules/bootstrap/dist/css/bootstrap.min.css",
+	"styles.scss"
+	],
   "apps": [
     {
       "root": "src",
